@@ -5,11 +5,11 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light'); //Whether dark mode is enabled or not
@@ -42,21 +42,23 @@ function App() {
     <>
     {/* <Navbar title="TextUtils" aboutText="About TextUtils"/> */}
     {/* <Navbar/> */}
-    <Router>
+    {/* <Router> */}
 
     <Navbar title="TextUtils" mode={mode} toggleMode ={toggleMode}/>
     <Alert alert={alert}/>
      <div className="conatiner">
-          <Routes>
+           {/* <Routes>
           <Route exact path="/about"
           element={<About/>}>
           </Route>
-        <Route exact path="/"element={<TextForm showAlert= {showAlert} heading ="Enter the text to analyze below" mode={mode}/>}>
-          </Route>
-          </Routes>
+        <Route exact path="/"element= */}
+          <About mode={mode}/>
+          <TextForm showAlert= {showAlert} heading =" Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode}/>
+          {/* </Route>
+          </Routes> */}
     
     </div>
-    </Router>
+    {/* </Router> */}
     
    </>
     
